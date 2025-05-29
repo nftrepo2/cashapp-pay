@@ -13,7 +13,7 @@ const SendMoney = require('./server/Models/sendMoney');
 const Withdraw = require('./server/Models/withdraw');
 
 const app = express();
-const PORT = process.env.PORT || 6500;
+const PORT = process.env.PORT || 6000;
 
 // Middlewares (unchanged)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -39,7 +39,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // DB config
-const db = 'mongodb+srv://pius1:pius123@webdevelopment.xav1dsx.mongodb.net/cashFake';
+const db = 'mongodb+srv://pius1:pius123@webdevelopment.xav1dsx.mongodb.net/cashapp-pay';
 mongoose.connect(db)
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
